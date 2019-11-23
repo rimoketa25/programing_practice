@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My App</title>
+    <script src="https://kit.fontawesome.com/929a2cf6ae.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <i id="open_menu" class="fas fa-bars"></i>
+        <nav id="menu">
+          <i id="close_menu" class="fas fa-times"></i>
+          <ul>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Menu</a></li>
+          </ul>
+        </nav>
+        <h1>My App</h1>
+      </div>
+    </header>
+
+    <section class="features">
+      <div class="container">
+        <h1 class="section-title">Features</h1>
+        <section class="feature">
+          <img src="img/feature1.png" alt="">
+          <p>hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. </p>
+        </section>
+        <section class="feature">
+          <img src="img/feature2.png" alt="">
+          <p>hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. </p>
+        </section>
+        <section class="feature">
+          <img src="img/feature3.png" alt="">
+          <p>hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. </p>
+        </section>
+      </div>
+    </section>
+
+    <section class="news">
+      <div class="container">
+        <h1 class="section-title">News</h1>
+        <div class="flex">
+          <article class="news-item">
+            <img src="img/news.png" alt="">
+            <p>hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. </p>
+          </article>
+          <article class="news-item">
+            <img src="img/news.png" alt="">
+            <p>hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. </p>
+          </article>
+          <article class="news-item">
+            <img src="img/news.png" alt="">
+            <p>hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-to-use">
+      <div class="container">
+        <h1 class="section-title">How to use</h1>
+        <div class="iframe-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/QrbYdJDJEb0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      &copy; dotinstall.com
+    </footer>
+
+    <script>
+      (function() {
+        'use strict';
+
+        var openMenu = document.getElementById('open_menu');
+        var closeMenu = document.getElementById('close_menu');
+        var menu = document.getElementById('menu');
+
+        openMenu.addEventListener('click', function() {
+          menu.classList.add('shown');
+        });
+
+        closeMenu.addEventListener('click', function() {
+          menu.classList.remove('shown');
+        });
+      })();
+    </script>
+
+  </body>
+</html>

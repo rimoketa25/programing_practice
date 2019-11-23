@@ -1,0 +1,179 @@
+body {
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, sans-serif;
+}
+
+/* ハンバーガーメニュー用　ここから↓ */
+.menu {
+  position: absolute;
+  top: 0;
+  color: #fff;
+  background: #4c81e9;
+  padding: 8px;
+  box-sizing: border-box;
+  width: 180px;
+  min-height: 100%;
+}
+
+#right {
+  z-index: 0;
+  right: 0;
+}
+
+#left {
+  z-index: 3;
+  left: -180px;
+  transition: 0.4s;
+}
+
+#main {
+  z-index: 1;
+  background: #eee;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #333;
+  padding: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transition: .4s;
+}
+
+#main.menu-open {
+  left: -180px;
+}
+
+#cover {
+  background: #000;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+}
+
+body.menu-open {
+  overflow-y: hidden;
+}
+
+body.menu-open #cover {
+  display: block;
+}
+
+body.menu-open #left {
+  left: 0;
+}
+
+#show1, #hide {
+  float: left;
+  cursor: pointer;
+}
+
+#show2 {
+  float: right;
+  cursor: pointer;
+}
+/* ハンバーガーメニュー用　ここまで↑ */
+
+
+/* タブメニュー用　ここから↓ */
+.container {
+  margin: 30px auto;
+  width: 500px;
+}
+
+.tab {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.tab li a {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  padding: 8px 0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px 4px 0 0;
+}
+
+.tab li a.active {
+  background: #333;
+  color: #fff;
+}
+
+.tab li a:not(.active):hover {
+  opacity: 0.5;
+  transition: 0.4s;
+}
+
+.content.active {
+  background: #333;
+  color: #fff;
+  min-height: 150px;
+  padding: 12px;
+  display: block;
+}
+
+.content {
+  display: none;
+}
+/* タブメニュー用　ここまで↑ */
+
+/* モーダルウィンドウ用　ここから↓ */
+#open, #close {
+  cursor: pointer;
+  background: #fff;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  padding: 12px 0;
+  margin: 16px auto 0;
+}
+
+#mask {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#modal {
+  background: #fff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 4px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: 0.4s;
+  z-index: 2;
+}
+
+#modal p {
+  margin: 0 0 20px;
+}
+
+#mask.hidden {
+  display: none;
+}
+
+#modal.hidden {
+  transform: translate(0, -500px);
+}
+/* モーダルウィンドウ用　ここまで↑ */

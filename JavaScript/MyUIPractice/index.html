@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Modal Window</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- ハンバーガーメニュー -->
+  <div class="menu" id="right">
+    <ul>
+      <li>MENU</li>
+      <li>MENU</li>
+      <li>MENU</li>
+      <li>MENU</li>
+      <li>MENU</li>
+    </ul>
+  </div>
+
+  <div id="main">
+    <i class="fa fa-bars" id="show1"></i>
+    <i class="fa fa-bars" id="show2"></i>
+    <h1>よく見るUIを作ってみたページ</h1>
+    <h2>ハンバーガーメニュー</h2>
+    <h3>左上ハンバーガー</h3>
+    <p>メインページに被さるように出てきます</p>
+    <h3>右上ハンバーガー</h3>
+    <p>メインページが左にズレるように出てきます。</p>
+    <p>Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello
+      world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world.
+      Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello
+      world. Hello world. Hello world. Hello world. </p>
+    <div id="cover"></div>
+
+    <div class="menu" id="left">
+      <i class="fa fa-times" id="hide"></i>
+      <ul>
+        <li>MENU</li>
+        <li>MENU</li>
+        <li>MENU</li>
+        <li>MENU</li>
+        <li>MENU</li>
+      </ul>
+    </div>
+
+    <!-- タブメニュー -->
+    <div class="container">
+      <h2>タブメニュー</h2>
+      <ul class="tab">
+        <li><a href="#" class="active" data-id="about">サイトの概要</a></li>
+        <li><a href="#" data-id="service">サービス内容</a></li>
+        <li><a href="#" data-id="contact">お問い合わせ</a></li>
+      </ul>
+
+      <section class="content active" id="about">
+        サイトの概要。サイトの概要。サイトの概要。サイトの概要。サイトの概要。サイトの概要。サイトの概要。サイトの概要。サイトの概要。サイトの概要。サイトの概要。サイトの概要。
+      </section>
+      <section class="content" id="service">
+        サービス内容。サービス内容。サービス内容。サービス内容。サービス内容。サービス内容。サービス内容。サービス内容。サービス内容。サービス内容。サービス内容。サービス内容。
+      </section>
+      <section class="content" id="contact">
+        お問い合わせ。お問い合わせ。お問い合わせ。お問い合わせ。お問い合わせ。お問い合わせ。お問い合わせ。お問い合わせ。お問い合わせ。お問い合わせ。お問い合わせ。お問い合わせ。
+      </section>
+    </div>
+
+    <!-- モーダルウィンドウ -->
+    <div id="open">
+      モーダルウィンドウを表示する
+    </div>
+
+    <div id="mask" class="hidden"></div>
+
+    <section id="modal" class="hidden">
+      <p>モーダルウィンドウです</p>
+      <p>閉じるボタンをクリックしたら閉じます</p>
+      <p>ウィンドウ外をクリックしても閉じます</p>
+      <div id="close">
+        閉じる
+      </div>
+    </section>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

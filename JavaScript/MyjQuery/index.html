@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery</title>
+  <style>
+    .myStyle {
+      border: 5px solid green;
+      font-size: 28px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>jQueryの基礎</h1>
+  <h2>要素の指定について</h2>
+  <h3>1. 要素を直接指定</h3>
+  <h4>hello. hello. hello. hello. hello. </h4>
+  <ul id="main">
+    <li>main0</li>
+    <li class="item">main1</li>
+    <li class="item">main2</li>
+    <li>
+      main-3
+      <ul id="sub">
+        <li>sub3-1</li>
+        <li>sub3-2</li>
+        <li class="item">sub3-3</li>
+        <li class="item">sub3-4</li>
+        <li>3-4</li>
+      </ul>
+    </li>
+    <li class="item">main4</li>
+  </ul>
+
+  <h3>2. 要素をフィルタとメソッドを使用して指定</h3>
+  <ul id="filter">
+    <li>0</li>
+    <li>1</li>
+    <li id="next">2</li>
+    <li>3</li>
+    <li>4</li>
+    <li id="siblings">5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+  </ul>
+
+  <h3>3. 属性セレクタを使用して指定</h3>
+  <section id="1-3">
+    <p><a href="http://google.com">google</a></p>
+    <p><a href="http://yahoo.co.jp">Yahoo!</a></p>
+    <p><a href="http://dotinstall.com">Dotinstall</a></p>
+  </section>
+  <hr>
+
+  <h2>基本的なメソッドについて</h2>
+  <section id="1"">
+    <h3>1. cssの設定と取得</h3>
+    <p>設定 ： .css('styleの指定', '値')</p>
+    <p>取得 ： .css('styleの指定')<button id=" c-color">色の確認</button></p>
+  </section>
+
+  <h3>2. classの操作</h3>
+  <p id="sample">サンプルテキスト</p>
+  <p>classの付加 ： .addClass('class名')<button id="add">add</button></p>
+  <p>classの除去 ： .removeClass('class名')<button id="remove">remove</button></p>
+
+  <h3>3. htmlの操作</h3>
+  <section id="3">
+    <p><a href="" data-sitename="google">google</a></p>
+    <p>設定 ： .attr('属性の指定', '値')</p>
+    <p>取得 ： .attr('属性の指定')<button id="c-href">リンク先の確認</button></p>
+    <p>カスタム属性値の取得 ： .data('カスタム属性名')<button id="c-data">カスタム属性値の確認</button></p>
+  </section>
+
+  <h3>4. タグの中身の操作</h3>
+  <p>テキストの設定 ： .text('値')　　
+    <span id="change1">サンプル</span>
+    <button id="c-text">値の変更</button>
+  </p>
+  <p>タグの挿入 ： .html('値')　　
+    <span id="change2">サンプル</span>
+    <button id="c-html">値の変更</button>
+  </p>
+  <p>入力フォームの値の設定 ： .val('属性の指定')　　
+    <input type="text" value="hello" id="change3">
+    <button id="c-val">値の変更</button>
+  </p>
+  <p>テキストの削除 ： .empty()　　
+    <span id="change4">サンプル</span>
+    <button id="empty">テキストの削除</button>
+  </p>
+  <p id="change5">タグの削除 ： .remove()　　
+    <button id="remove1">タグの削除</button>
+  </p>
+
+  <input type="text" value="hello">
+  <input type="text" id="name">
+  <select id="members" name="members">
+    <option>taguchi</option>
+    <option>fkoji</option>
+    <option>dotinstall</option>
+  </select>
+
+  <button>Add!</button>
+
+  <div id="box" style="width:100px;height:100px;background:red;"></div>
+
+
+
+  <button>もっと読む</button>
+  <div id="result"></div>
+
+  <p>
+    <input type="text" name="name" id="name">
+    <input type="button" id="greet" value="Greet!">
+  </p>
+  <div id="result"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

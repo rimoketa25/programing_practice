@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>FontAwesome</title>
+  <script>
+    // 疑似要素を使うための宣言
+    FontAwesomeConfig = { searchPseudoElements: true };
+  </script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <h1>アイコンの種類について</h1>
+  <!--
+    種類
+    fas (solid)
+    far (regular)
+    fal (light)
+    fab (brand)
+  -->
+  <i class="fas fa-flag my-icon"></i>
+  <i class="far fa-flag"></i>
+  <i class="fab fa-twitter"></i>
+  <hr>
+
+  <h1>アイコンの大きさの指定</h1>
+  <!--
+    Size:
+    - fa-xs
+   - fa-sm
+   - fa-lg
+   - fa-2x ... fa-10x
+  -->
+  <i class="fas fa-flag"></i>
+  <i class="fas fa-flag fa-xs"></i>
+  <i class="fas fa-flag fa-sm"></i>
+  <i class="fas fa-flag fa-lg"></i>
+  <i class="fas fa-flag fa-5x"></i>
+  <i class="fas fa-flag fa-10x"></i>
+  <hr>
+
+  <h1>リストにアイコンを使用</h1>
+  <h2>アイコンを等幅に指定</h2>
+  <div><i class="fas fa-fw fa-home"></i> Home</div>
+  <div><i class="fas fa-fw fa-info"></i> About</div>
+  <div><i class="fas fa-fw fa-question"></i> Help</div>
+  <h2>ulタグを使用</h2>
+  <ul class="fa-ul">
+    <li><span class="fa-li"><i class="fas fa-home"></i></span> Home</li>
+    <li><span class="fa-li"><i class="fas fa-info"></i></span> About</li>
+    <li><span class="fa-li"><i class="fas fa-question"></i></span> Help</li>
+  </ul>
+  <hr>
+
+  <h1>回転アニメーション</h1>
+  <i class="fas fa-spinner fa-spin fa-3x"></i>
+  <i class="fas fa-spinner fa-pulse fa-3x"></i>
+  <hr>
+
+  <h1>図形の変形</h1>
+  <!--
+  Transform:拡大・縮小
+  - Scaling
+  - Positioning
+  - Rotating
+  -->
+  <h2>拡大・縮小</h2>
+  <i class="fas fa-arrow-up bg-pink"></i>
+  <i class="fas fa-arrow-up bg-pink" data-fa-transform="grow-16"></i>
+  <i class="fas fa-arrow-up bg-pink" data-fa-transform="shrink-8"></i>
+  <hr>
+  <i class="fas fa-arrow-up bg-pink"></i>
+  <i class="fas fa-arrow-up bg-pink fa-2x"></i>
+  <h2>移動</h2>
+  <i class="fas fa-arrow-up"></i>
+  <i class="fas fa-arrow-up bg-pink" data-fa-transform="up-8"></i>
+  <i class="fas fa-arrow-up bg-pink" data-fa-transform="right-8"></i>
+  <i class="fas fa-arrow-up"></i>
+  <h2>回転</h2>
+  <i class="fas fa-arrow-up bg-pink" data-fa-transform="rotate-30"></i>
+  <i class="fas fa-arrow-up bg-pink" data-fa-transform="rotate-60"></i>
+  <i class="fas fa-arrow-up bg-pink" data-fa-transform="rotate--30"></i>
+  <i class="fas fa-flag"></i>
+  <i class="fas fa-flag bg-pink" data-fa-transform="flip-h"></i>
+  <i class="fas fa-flag bg-pink" data-fa-transform="flip-v"></i>
+  <i class="fas fa-flag bg-pink" data-fa-transform="flip-h flip-v"></i>
+  <hr>
+
+  <h1>複数アイコンの操作</h1>
+  <i class="fas fa-lock"></i>
+  <i class="fas fa-file"></i>
+  <h2>マスク機能</h2>
+  <span class="fa-5x">
+    <i class="fas fa-lock bg-pink" data-fa-mask="fas fa-file" data-fa-transform="shrink-10 down-1.2"></i>
+  </span>
+  <h2>重ねる</h2>
+  <span class="fa-5x">
+    <span class="fa-layers fa-fw bg-pink">
+      <i class="fas fa-file"></i>
+      <!-- <i class="fas fa-lock fa-inverse" data-fa-transform="shrink-10 down-1.2"></i> -->
+      <i class="fas fa-lock" data-fa-transform="shrink-10 down-1.2" style="color:aqua;"></i>
+    </span>
+  </span>
+  <hr>
+
+  <h1>アイコンとテキストの操作</h1>
+  <span class="fa-5x">
+    <span class="fa-layers bg-pink">
+      <i class="fas fa-file"></i>
+      <span class="fa-layers-text" data-fa-transform="shrink-12 down-1.2"
+        style="color:orange; font-weight:bold;">PDF</span>
+    </span>
+  </span>
+  <hr>
+
+  <h1>疑似要素として使用</h1>
+  <a href="#" class="home">Home</a>
+</body>
+
+</html>
