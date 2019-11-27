@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: "Century Gothic";
+  font-size: 16px;
+}
+
+h1, h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+}
+
+#container {
+  text-align: center;
+  margin: 5px auto;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto 12px;
+}
+
+#replay {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  padding: 7px;
+  background: #0af;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#replay.hidden {
+  display: none;
+}
