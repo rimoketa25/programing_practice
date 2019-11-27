@@ -1,0 +1,15 @@
+body > h1 {
+  margin-top: 30px;
+}
+
+.box-container {
+  width: 100px;
+  height: 100px;
+  background: #ddd;
+  margin-bottom: 5px;
+}
+
+.cover {
+  background: url(../img/bg.png);
+  background-size: cover;
+}
