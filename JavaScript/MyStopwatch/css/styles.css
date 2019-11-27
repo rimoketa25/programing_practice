@@ -1,7 +1,6 @@
 body {
   font-family: 'Courier New', monospace;
   font-size: 14px;
-  background: #eee;
 }
 
 h1, h3 {
@@ -13,6 +12,7 @@ h1, h3 {
   margin: 20px auto;
   width: 360px;
   background: #fff;
+  border: #333 solid 1px;
   padding: 15px;
   text-align: center;
 }
