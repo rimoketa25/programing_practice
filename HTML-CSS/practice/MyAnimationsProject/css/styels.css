@@ -1,0 +1,117 @@
+h1 {
+  margin-bottom: 0px;
+}
+
+
+.box {
+  width: 40px;
+  height: 40px;
+  background: skyblue;
+  cursor: pointer;
+}
+
+.ex2:hover {
+  transform-origin: left top;
+  transform: translate(20px, 10px) scale(1.5) rotate(45deg);
+}
+
+.ex3{
+  opacity: 1;
+  /* transition-property: transform, opacity; */
+  /* transition-duration: .4s, .4s; */
+  transition: transform .4s, opacity .4s;
+}
+
+.ex3:hover {
+  transform: rotate(45deg);
+  opacity: 0.3;
+}
+
+.ex4 {
+  transition: 2s;
+}
+
+.ex4.moved {
+  transform: translate(400px, 0);
+}
+
+.box1 {
+  transition-timing-function: cubic-bezier(0, 0.76, 0.32, 2.4);
+}
+
+.box2 {
+  transition-timing-function: ease-out;
+}
+
+.box3 {
+  transition-timing-function: ease-in-out;
+  height: 180px;
+  background: #333;
+}
+
+.ex7.moved {
+  animation-name: spin1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin1 {
+  0% { transform: none; }
+  100% { transform: rotate(360deg); }
+}
+
+.ex8.moved {
+  animation-name: spin2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transition-timing-function: ease-in-out;
+}
+
+@keyframes spin2 {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotate(270deg) scale(0.8);
+    border-radius: 50%;
+  }
+  80% {
+    transform: rotate(302deg) scale(1.8);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ex9.moved {
+  animation-name: spin3;
+  animation-duration: 2s;
+  transition-timing-function: ease-in-out;
+}
+
+.box4 {
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.box5 {
+  margin-bottom: 300px;
+  animation-fill-mode: forwards;
+}
+
+@keyframes spin3 {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotate(270deg) scale(0.8);
+    border-radius: 50%;
+  }
+  80% {
+    transform: rotate(302deg) scale(1.8);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.2) translateY(200px);
+  }
+}

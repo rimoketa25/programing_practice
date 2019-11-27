@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>詳解CSS アニメーション</title>
+    <link rel="stylesheet" href="css/styels.css">
+  </head>
+  <body>
+    <h1>#02 transformで要素を変形させよう</h1>
+    <div class="box ex2"></div>
+
+    <h1>#03 transitionでアニメーションさせよう</h1>
+    <div class="box ex3"></div>
+
+    <h1>#04 クリックして要素を動かそう</h1>
+    <h1>#05 アニメーションに変化をつけよう</h1>
+    <h1>#06 アニメーションを調整してみよう</h1>
+    <div class="box ex4 box1"></div>
+    <div class="box ex4 box2"></div>
+    <div class="box ex4 box3"></div>
+
+    <h1>#07 より複雑なアニメーションを作ろう</h1>
+    <div class="box ex7"></div>
+
+    <h1>#08 @keyframesを追加してみよう</h1>
+    <div class="box ex8"></div>
+
+    <h1>#09 アニメーションの挙動を制御しよう</h1>
+    <div class="box ex9 box4"></div>
+    <div class="box ex9 box5"></div>
+
+    <script>
+      (() => {
+        'use strict';
+        document.querySelector('body').addEventListener('click', () => {
+          document.querySelectorAll('.ex4, .ex7, .ex8, .ex9').forEach((box) => {
+            box.classList.add('moved');
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
