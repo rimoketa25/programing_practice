@@ -12,7 +12,7 @@ class CommentsController extends AppController {
     // POSTで通信された時だけ実行
     if ($this->request->is('post')) {
       // リクエストデータの取得
-      $comment = $this->Comments->patchEntity($comment, $this->request->data);
+      $comment = $this->Comments->patchEntity($comment, $this->request->getData());
 
       // 投稿
       if ($this->Comments->save($comment)) {

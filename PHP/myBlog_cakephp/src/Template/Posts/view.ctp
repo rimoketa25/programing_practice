@@ -38,7 +38,7 @@ $this->assign('title', '詳細');
 <?= $this->Form->create(null, [
   'url' => ['controller'=>'Comments', 'action'=>'add']
 ]); ?>
-<?= $this->Form->input('body'); ?>
+<?= $this->Form->control('body'); ?>
 <?= $this->Form->hidden('post_id', ['value'=>$post->id]); ?>
 <?= $this->Form->button('追加'); ?>
 <?= $this->Form->end(); ?>

@@ -10,7 +10,7 @@ $this->assign('title', '編集');
 
 <!-- フォームの作成 -->
 <?= $this->Form->create($post); ?>
-<?= $this->Form->input('title'); ?>
-<?= $this->Form->input('body', ['rows'=>'3']); ?>
+<?= $this->Form->control('title'); ?>
+<?= $this->Form->control('body', ['rows'=>'3']); ?>
 <?= $this->Form->button('更新'); ?>
 <?= $this->Form->end(); ?>

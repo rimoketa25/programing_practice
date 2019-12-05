@@ -8,6 +8,7 @@ class PostsController extends AppController {
   public function index() {
     // 表示内容の取得
     $posts = $this->Posts->find('all');
+              ->order(['created' => 'ASC']);
 
     // 自身に設定
     $this->set(compact('posts'));
@@ -33,7 +34,7 @@ class PostsController extends AppController {
     // POSTで通信された時だけ実行
     if ($this->request->is('post')) {
       // リクエストデータの取得
-      $post = $this->Posts->patchEntity($post, $this->request->data);
+      $post = $this->Posts->patchEntity($post, $this->request->getData());
 
       // 投稿
       if ($this->Posts->save($post)) {
@@ -58,7 +59,7 @@ class PostsController extends AppController {
     // POST、PATC、PUTで通信された時だけ実行
     if ($this->request->is(['post', 'patch', 'put'])) {
       // リクエストデータの取得
-      $post = $this->Posts->patchEntity($post, $this->request->data);
+      $post = $this->Posts->patchEntity($post, $this->request->getData());
 
       // 更新
       if ($this->Posts->save($post)) {
