@@ -7,7 +7,7 @@ class PostsController extends AppController {
   // 一覧の表示
   public function index() {
     // 表示内容の取得
-    $posts = $this->Posts->find('all');
+    $posts = $this->Posts->find('all')
               ->order(['created' => 'ASC']);
 
     // 自身に設定
